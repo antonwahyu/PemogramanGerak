@@ -1,0 +1,53 @@
+SCREEN 1 — Pencarian Cepat (Quick Search Screen)
+activity_search.xml
+xml
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/darkGreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Pencarian Cepat"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:text="Masukkan nama dan tanggal lahir untuk memeriksa lisensi."
+        android:textColor="@color/gray"
+        android:layout_marginBottom="24dp" />
+
+    <EditText
+        android:id="@+id/etNama"
+        android:hint="Masukkan nama lengkap"
+        android:background="@drawable/input_bg"
+        android:padding="14dp"
+        android:textColorHint="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etTanggal"
+        android:hint="Pilih tanggal lahir"
+        android:focusable="false"
+        android:background="@drawable/input_bg"
+        android:drawableEnd="@drawable/ic_calendar"
+        android:padding="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnCari"
+        android:text="Cari"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/neonGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,53 @@
+SCREEN 3 — Tidak Ditemukan
+activity_not_found.xml
+xml
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/darkGreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/ic_search_error"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:text="Lisensi Tidak Ditemukan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:text="Data lisensi tidak dapat ditemukan. Silakan periksa kembali data yang Anda masukkan."
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:layout_marginTop="12dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:text="Kembali"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/darkGray" />
+
+        <Button
+            android:id="@+id/btnCariLagi"
+            android:text="Cari Lagi"
+            android:layout_marginStart="12dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/neonGreen" />
+    </LinearLayout>
+</LinearLayout>
