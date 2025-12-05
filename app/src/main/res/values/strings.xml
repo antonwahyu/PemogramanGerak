@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UTSpemogramanBergerak</string>
+    <string name="pencarian_cepat">Pencarian Cepat</string>
+    <string name="deskripsi_pencarian">Masukkan nama dan tanggal lahir untuk memeriksa lisensi.</string>
+    <string name="hint_nama">Masukkan nama lengkap</string>
+    <string name="hint_tanggal">Pilih tanggal lahir</string>
+    <string name="cari">Cari</string>
+
+</resources>

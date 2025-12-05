@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/darkGreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/pencarian_cepat"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:text="@string/deskripsi_pencarian"
+        android:textColor="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp" />
+
+    <EditText
+        android:id="@+id/etNama"
+        android:hint="@string/hint_nama"
+        android:background="@drawable/input_bg"
+        android:padding="14dp"
+        android:textColorHint="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etTanggal"
+        android:hint="@string/hint_tanggal"
+        android:focusable="false"
+        android:background="@drawable/input_bg"
+        android:drawableEnd="@drawable/ic_calendar"
+        android:padding="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnCari"
+        android:text="@string/cari"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/neonGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
