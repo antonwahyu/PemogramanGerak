@@ -1,54 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="24dp"
     android:background="@color/darkGreen"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Mainsearch2">
 
     <TextView
-        android:text="@string/pencarian_cepat"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        android:textStyle="bold"
+        android:id="@+id/tvHeaderTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
-        android:text="@string/deskripsi_pencarian"
-        android:textColor="@color/gray"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="16dp"  android:text="Form Pencarian (Dewi Ratnasari)"
+        android:textColor="@color/white"   android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="@string/hint_nama"
         android:background="@drawable/input_bg"
         android:padding="14dp"
         android:textColorHint="@color/gray"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:inputType="textPersonName"
+        android:autofillHints="personName" />
 
     <EditText
-        android:id="@+id/etTanggal"
-        android:hint="@string/hint_tanggal"
-        android:focusable="false"
-        android:background="@drawable/input_bg"
-        android:drawableEnd="@drawable/ic_calendar"
-        android:padding="14dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/edit_text_tanggal_lahir"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Masukkan tanggal"
+        android:background="@drawable/input_bg"  android:padding="14dp"                   android:textColorHint="@color/gray"       android:focusable="false"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:inputType="none"
 
-    <Button
-        android:id="@+id/btnCari"
-        android:text="@string/cari"
-        android:textAllCaps="false"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/neonGreen"
+        android:drawableEnd="@drawable/ic_calendar" />
+
+    <TextView
+        android:id="@+id/tvFooterNote"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Catatan Kaki (Dewi Ratnasari)"
+        android:textColor="@color/white" />
+
 </LinearLayout>

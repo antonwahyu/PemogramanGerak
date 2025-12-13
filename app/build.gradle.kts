@@ -1,14 +1,13 @@
 plugins {
+    // 1. Plugins Wajib (Termasuk Plugin Compose yang Hilang)
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.compose) // BARIS PERBAIKAN: Diperlukan karena Compose diaktifkan
 }
 
 android {
     namespace = "com.example.utspemogramanbergerak"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36 // Menggunakan versi SDK terbaru (berdasarkan konfigurasi Anda)
 
     defaultConfig {
         applicationId = "com.example.utspemogramanbergerak"
@@ -36,29 +35,40 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    // 2. Konfigurasi Build Features (Views dan Compose)
     buildFeatures {
-        compose = true
+        viewBinding = true // Untuk Views (jika Anda menggunakannya)
+        compose = true     // Untuk mengaktifkan Compose (membuat Color.kt berfungsi)
+    }
+
+    // 3. Konfigurasi Khusus Compose
+    composeOptions {
+        // Ganti dengan versi Kotlin Compiler Extension yang sesuai dengan versi Compose Anda (Contoh: "1.5.1")
+        kotlinCompilerExtensionVersion = "1.5.1"
     }
 }
 
 dependencies {
+    // 4. Dependensi Views/XML (AppCompat, Material, ConstraintLayout)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // 5. Dependensi JETPACK COMPOSE (Untuk mengkompilasi file tema Compose)
+    // Dependency ini menyelesaikan error "Unresolved reference 'Color'"
+    val composeBom = platform("androidx.compose:compose-bom:2024.04.00") // Gunakan BOM untuk manajemen versi yang lebih baik
+    implementation(composeBom)
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+
+    // 6. Dependensi Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }

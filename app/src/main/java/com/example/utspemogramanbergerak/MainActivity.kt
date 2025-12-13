@@ -1,47 +1,34 @@
 package com.example.utspemogramanbergerak
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.utspemogramanbergerak.ui.theme.UTSpemogramanBergerakTheme
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            UTSpemogramanBergerakTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        // Tombol menuju Mainsearch2
+        // Pastikan ID di sini (R.id.btn_mainsearch2) sama dengan ID di activity_main.xml
+        val btnSearch = findViewById<Button>(R.id.btn_mainsearch2)
+        btnSearch.setOnClickListener {
+            startActivity(Intent(this, Mainsearch2::class.java))
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        // Tombol menuju ResultActivity
+        // Pastikan ID di sini (R.id.btn_result) sama dengan ID di activity_main.xml
+        val btnResult = findViewById<Button>(R.id.btn_result)
+        btnResult.setOnClickListener {
+            startActivity(Intent(this, ResultActivity::class.java))
+        }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    UTSpemogramanBergerakTheme {
-        Greeting("Android")
+        // Tombol menuju NotFoundActivity
+        // Pastikan ID di sini (R.id.btn_notfound) sama dengan ID di activity_main.xml
+        val btnNotFound = findViewById<Button>(R.id.btn_notfound)
+        btnNotFound.setOnClickListener {
+            startActivity(Intent(this, NotFoundActivity::class.java))
+        }
     }
 }

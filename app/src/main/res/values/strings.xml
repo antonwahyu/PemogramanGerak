@@ -1,9 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">UTSpemogramanBergerak</string>
-    <string name="pencarian_cepat">Pencarian Cepat</string>
-    <string name="deskripsi_pencarian">Masukkan nama dan tanggal lahir untuk memeriksa lisensi.</string>
-    <string name="hint_nama">Masukkan nama lengkap</string>
-    <string name="hint_tanggal">Pilih tanggal lahir</string>
+    <string name="pencarian_cepat">pencarian cepat</string>
+    <string name="tombol_buka_mainsearch2">Buka Mainsearch2</string>
+    <string name="tombol_buka_result">Buka ResultActivity</string>
+    <string name="tombol_buka_notfound">Buka NotFoundActivity</string>
+    <string name="deskripsi_pencarian">Masukkan data pencarian</string>
+    <string name="hint_nama">Masukkan nama</string>
+    <string name="hint_tanggal">Masukkan tanggal</string>
     <string name="cari">Cari</string>
-
 </resources>
